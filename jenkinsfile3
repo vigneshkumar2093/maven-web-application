@@ -14,7 +14,7 @@ stages{
 
        stage("CheckOutCode"){ 
        steps{
-       git branch: 'development', credentialsId: '27e3acff-da7a-453b-9c5e-6dcb00019fe7', url: 'https://github.com/vigneshkumar2093/maven-web-application.git'
+       git branch: 'master', credentialsId: '27e3acff-da7a-453b-9c5e-6dcb00019fe7', url: 'https://github.com/vigneshkumar2093/maven-web-application.git'
        }
        }
        stage("Build"){ 
