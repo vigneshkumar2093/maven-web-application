@@ -1,5 +1,5 @@
 //pipeline declarative way:
-
+#!/usr/bin/env groovy
 
 pipeline{
 
