@@ -1,25 +1,15 @@
 //pipeline declarative way:
 
-pipeline{
-
-agent any 
-
-tools{
-maven "maven3.9.3"
-}
-
-
-stages{
-
-       stage("CheckOutCode"){ 
-       steps{
-       git branch: 'master', credentialsId: '27e3acff-da7a-453b-9c5e-6dcb00019fe7', url: 'https://github.com/vigneshkumar2093/maven-web-application.git'
-       }
-       }
-       stage("Build"){ 
-       steps{
-       sh "mvn clean package"
-       }
-       }
-}
+pipeline {
+    agent any
+    stages {
+        stage('Example') {
+            steps {
+                script {
+                    def output = sh(returnStdout: true, script: 'free -m')
+                    echo "Output: ${output}"
+                }
+            }
+        }
+    }
 }
